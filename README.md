@@ -1,30 +1,87 @@
-# Portfolio — Nguyễn Hoàng Gia Linh
+# Nguyễn Hoàng Gia Linh — Personal Portfolio
 
-Bản tổng hợp mới nhất: xanh đậm – mint, cỡ chữ lớn hơn, ba dự án, bốn chứng nhận; đã bỏ khung trang trí trống và dự kiến tốt nghiệp.
+Portfolio cá nhân giới thiệu học vấn, kỹ năng, kinh nghiệm, dự án
+và chứng nhận của Nguyễn Hoàng Gia Linh.
 
-## Các file
-- `index.html`: nội dung trang.
-- `style.css`: giao diện và responsive.
-- `script.js`: menu điện thoại và năm ở chân trang.
-- `Gia-Linh-CV.pdf`: CV mở từ nút Xem CV.
-- `certificates/`: hai chứng nhận Cisco dạng PDF.
-- `.nojekyll`: dùng cho GitHub Pages.
+Sinh viên ngành An toàn thông tin tại FPT University Cần Thơ,
+định hướng trở thành Cybersecurity Analyst trong lĩnh vực
+Security Operations (SecOps).
 
-## Xem trên máy
-Mở index.html bằng trình duyệt, hoặc mở thư mục bằng VS Code và dùng Live Server. Không cần cài thư viện hay chạy build.
+## Website
 
-## Cập nhật repository GitHub hiện có
-1. Giải nén file ZIP.
-2. Vào repository Portfolio trên GitHub, chọn Add file → Upload files.
-3. Tải nội dung bên trong thư mục này lên: index.html, style.css, script.js, Gia-Linh-CV.pdf và thư mục certificates. Không tải file ZIP và không đặt thêm một thư mục bao ngoài.
-4. Chọn Commit changes. Các file trùng đường dẫn sẽ được cập nhật.
-5. Nếu GitHub Pages đã bật thì chờ lần triển khai mới hoàn tất trong tab Actions. Nếu chưa bật: Settings → Pages → Deploy from a branch → main → /(root) → Save.
-6. Mở https://gialinh0412.github.io/Portfolio/ và nhấn Ctrl + F5. Kiểm tra nút CV, demo, bốn chứng nhận và liên hệ.
+🌐 [Xem portfolio](https://gialinh0412.github.io/Portfolio/)
 
-## Chỉnh nội dung
-- Sửa nội dung và link trong index.html.
-- Sửa cỡ chữ, màu sắc, khoảng cách trong style.css.
-- Thay Gia-Linh-CV.pdf bằng bản CV mới nhưng giữ tên file để nút tiếp tục hoạt động.
-- Hai link Coursera nằm trong mục certificates của index.html.
+## Nội dung
 
-Giữ đúng chữ hoa/thường trong tên file và đường dẫn. Bản này không dùng cấu hình hay thông tin truy cập của dịch vụ Sites.
+- **Giới thiệu:** Thông tin học vấn và định hướng nghề nghiệp.
+- **Kỹ năng:** An toàn thông tin, mạng máy tính, lập trình,
+  phân tích dữ liệu và công cụ thực hành.
+- **Dự án:** Campus Event Management, phát hiện Botnet bằng
+  học máy và cơ sở dữ liệu quản lý hiệu sách.
+- **Kinh nghiệm & Hoạt động:** IT Helpdesk, F-Vovinam Club
+  và Green Heart.
+- **Chứng nhận:** Các khóa học Cisco Networking Academy
+  và chương trình chuyên môn hóa trên Coursera.
+- **Liên hệ:** Email, GitHub và LinkedIn.
+
+## Công nghệ
+
+- HTML5
+- CSS3
+- JavaScript
+- GitHub Pages
+
+Website sử dụng tông xanh đậm – mint, hỗ trợ hiển thị trên
+máy tính và điện thoại.
+
+## Dự án tiêu biểu
+
+### Campus Event Management
+
+Ứng dụng quản lý sự kiện trong trường, hỗ trợ quản lý sự kiện,
+đăng ký người tham dự, tìm kiếm, thống kê, lưu JSON và xuất CSV.
+
+**Công nghệ:** Python, Flask, Bootstrap, Docker.
+
+[Trải nghiệm demo](https://campus-event-management-web.onrender.com)
+
+### Phát hiện Botnet bằng học máy
+
+Bài thực hành xây dựng quy trình phân loại lưu lượng BENIGN
+và Bot từ dữ liệu CICIDS2017, gồm tiền xử lý dữ liệu và đánh giá
+mô hình.
+
+**Công nghệ:** Python, pandas, scikit-learn.
+
+### Cơ sở dữ liệu quản lý hiệu sách
+
+Dự án học tập về thiết kế cơ sở dữ liệu quan hệ và viết truy vấn
+SQL phục vụ bài toán quản lý hiệu sách.
+
+**Công nghệ:** SQL, cơ sở dữ liệu quan hệ.
+
+## Chứng nhận
+
+- **CCNA: Introduction to Networks** — Cisco Networking Academy.
+- **CCNA: Switching, Routing, and Wireless Essentials**
+  — Cisco Networking Academy.
+- **Introduction to Cyber Security** — New York University,
+  thông qua Coursera.
+- **Applied Cryptography** — University of Colorado System,
+  thông qua Coursera.
+
+Các chứng nhận có thể xem trực tiếp tại website portfolio.
+
+## Chạy trên máy
+
+1. Tải hoặc clone repository.
+2. Mở file `index.html` bằng trình duyệt.
+
+Có thể sử dụng Live Server trong VS Code để xem thay đổi
+khi chỉnh sửa. Không cần cài thư viện hoặc chạy build.
+
+## Liên hệ
+
+- **Email:** [linhnhgce181900@fpt.edu.vn](mailto:linhnhgce181900@fpt.edu.vn)
+- **GitHub:** [gialinh0412](https://github.com/gialinh0412)
+- **LinkedIn:** [Nguyễn Hoàng Gia Linh](https://www.linkedin.com/in/nguy%E1%BB%85n-ho%C3%A0ng-gia-linh-322b062b8/)
