@@ -72,14 +72,6 @@ SQL phục vụ bài toán quản lý hiệu sách.
 
 Các chứng nhận có thể xem trực tiếp tại website portfolio.
 
-## Chạy trên máy
-
-1. Tải hoặc clone repository.
-2. Mở file `index.html` bằng trình duyệt.
-
-Có thể sử dụng Live Server trong VS Code để xem thay đổi
-khi chỉnh sửa. Không cần cài thư viện hoặc chạy build.
-
 ## Liên hệ
 
 - **Email:** [linhnhgce181900@fpt.edu.vn](mailto:linhnhgce181900@fpt.edu.vn)
