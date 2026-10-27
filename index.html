@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1928" />
+    <meta
+      name="description"
+      content="Portfolio Nguyễn Hoàng Gia Linh — sinh viên An toàn thông tin tại FPT University Cần Thơ, định hướng Cybersecurity Analyst."
+    />
+    <title>Gia Linh | Cybersecurity Portfolio</title>
+    <style>
+      :root {
+        --bg: #0b1928;
+        --panel: #102438;
+        --text: #edf5fa;
+        --muted: #afc1cf;
+        --mint: #83edcb;
+        --line: #263e50;
+        --radius: 20px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.7;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid var(--mint);
+        outline-offset: 5px;
+      }
+      .container {
+        width: min(1100px, 90%);
+        margin-inline: auto;
+      }
+      .skip {
+        position: fixed;
+        top: -100px;
+        left: 20px;
+        background: var(--mint);
+        color: var(--bg);
+        padding: 10px;
+        z-index: 100;
+      }
+      .skip:focus {
+        top: 10px;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: #0b1928f5;
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .logo {
+        font-size: 21px;
+        font-weight: 800;
+        letter-spacing: -0.8px;
+      }
+      .logo span {
+        color: var(--mint);
+      }
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+      .links a {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .links a:hover {
+        color: var(--mint);
+      }
+      .menu {
+        display: none;
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 8px 12px;
+        font: inherit;
+        cursor: pointer;
+      }
+      .hero {
+        padding: 95px 0 85px;
+        display: grid;
+        grid-template-columns: 1.45fr 1fr;
+        align-items: center;
+        gap: 60px;
+      }
+      .eyebrow {
+        color: var(--mint);
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      h1 {
+        font-size: clamp(42px, 6vw, 72px);
+        line-height: 1.12;
+        letter-spacing: -3px;
+        margin: 20px 0;
+      }
+      h1 span {
+        display: block;
+        color: var(--mint);
+      }
+      .intro {
+        max-width: 570px;
+        color: var(--muted);
+        font-size: 17px;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 11px 20px;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        font-weight: 650;
+        font-size: 14px;
+        transition:
+          transform 0.2s,
+          border-color 0.2s;
+      }
+      .button:hover {
+        transform: translateY(-2px);
+        border-color: var(--mint);
+      }
+      .primary {
+        background: var(--mint);
+        color: var(--bg);
+        border-color: var(--mint);
+      }
+      .profile {
+        position: relative;
+        padding: 32px;
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        background: linear-gradient(145deg, #17374a, #102438 70%);
+      }
+      .monogram {
+        display: grid;
+        place-items: center;
+        width: fit-content;
+        min-width: 90px;
+        padding: 0 20px;
+        height: 90px;
+        border-radius: 24px;
+        background: var(--mint);
+        color: var(--bg);
+        font-size: 34px;
+        font-weight: 800;
+      }
+      .profile h2 {
+        margin: 24px 0 4px;
+        font-size: 22px;
+      }
+      .profile p {
+        color: var(--muted);
+        margin: 0 0 20px;
+      }
+      .profile dl {
+        margin: 0;
+      }
+      .profile dl div {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 0;
+        border-top: 1px solid var(--line);
+        font-size: 13px;
+      }
+      dt {
+        color: var(--muted);
+      }
+      dd {
+        margin: 0;
+        text-align: right;
+      }
+      section {
+        padding: 64px 0;
+        border-top: 1px solid var(--line);
+      }
+      .heading {
+        margin-bottom: 30px;
+      }
+      .heading h2 {
+        font-size: clamp(27px, 4vw, 36px);
+        letter-spacing: -1px;
+        margin: 8px 0;
+      }
+      .heading p,
+      .muted {
+        color: var(--muted);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .two {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 28px;
+      }
+      .card h3 {
+        font-size: 20px;
+        line-height: 1.4;
+        margin: 14px 0;
+      }
+      .card p {
+        color: var(--muted);
+        margin: 12px 0;
+      }
+      .number {
+        color: var(--mint);
+        font:
+          14px ui-monospace,
+          monospace;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 20px;
+      }
+      .tag {
+        font-size: 12px;
+        color: var(--mint);
+        padding: 4px 10px;
+        border-radius: 6px;
+        background: #83edcb0d;
+        border: 1px solid #83edcb28;
+      }
+      .project-link {
+        display: inline-block;
+        margin-top: 22px;
+        color: var(--mint);
+        font-weight: 650;
+      }
+      .project-link:hover {
+        text-decoration: underline;
+      }
+      .experience {
+        display: grid;
+        grid-template-columns: 1fr 1.6fr;
+        gap: 36px;
+      }
+      .experience h3 {
+        margin: 0 0 8px;
+      }
+      ul {
+        padding-left: 20px;
+        color: var(--muted);
+        margin: 0;
+      }
+      li + li {
+        margin-top: 10px;
+      }
+      .contact {
+        padding: 42px;
+        border-radius: 24px;
+        background: linear-gradient(120deg, #16394a, #102438);
+        border: 1px solid #83edcb40;
+      }
+      .contact h2 {
+        margin-top: 0;
+        font-size: 34px;
+        letter-spacing: -1px;
+      }
+      .contact p {
+        color: var(--muted);
+        max-width: 650px;
+      }
+      footer {
+        padding: 25px 0;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      @media (max-width: 850px) {
+        .hero {
+          gap: 30px;
+          grid-template-columns: 1fr;
+          padding-top: 60px;
+        }
+        .profile {
+          max-width: 520px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .two {
+          grid-template-columns: 1fr;
+        }
+        .experience {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .menu {
+          display: inline-block;
+        }
+        .links {
+          display: none;
+          position: absolute;
+          top: 76px;
+          left: 0;
+          right: 0;
+          padding: 24px 5%;
+          background: var(--bg);
+          border-bottom: 1px solid var(--line);
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .links.open {
+          display: flex;
+        }
+        h1 {
+          letter-spacing: -2px;
+        }
+        section {
+          padding: 48px 0;
+        }
+        .contact {
+          padding: 28px;
+        }
+        .footer-inner {
+          flex-direction: column;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .button {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Đến nội dung chính</a>
+
+    <header>
+      <nav class="container nav" aria-label="Điều hướng chính">
+        <a class="logo" href="#" aria-label="Gia Linh — Trang đầu"
+          >Gia Linh<span>.</span></a
+        >
+        <button
+          class="menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          Menu
+        </button>
+        <div class="links" id="nav-links">
+          <a href="#about">Giới thiệu</a>
+          <a href="#skills">Kỹ năng</a>
+          <a href="#experience">Kinh nghiệm</a>
+          <a href="#projects">Dự án</a>
+          <a href="#certificates">Chứng nhận</a>
+          <a href="#contact">Liên hệ</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="container">
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Information Security · FPT University</div>
+          <h1>Nguyễn Hoàng<span>Gia Linh.</span></h1>
+          <p class="intro">
+            Sinh viên An toàn thông tin tại Trường Đại Học FPT Cần Thơ, định hướng
+            trở thành <strong>SecOps</strong>. Tôi xây dựng nền tảng qua lập
+            trình, mạng máy tính và các bài thực hành phân tích an ninh.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="./Gia-Linh-CV.pdf" target="_blank" rel="noopener noreferrer">Xem CV ↗</a>
+            <a class="button" href="./Gia-Linh-CV.pdf" download="Gia-Linh-CV.pdf">Tải CV ↓</a>
+            <a class="button" href="#projects">Khám phá dự án ↗</a>
+            <a
+              class="button"
+              href="https://github.com/gialinh0412"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub ↗</a
+            >
+          </div>
+        </div>
+
+        <aside class="profile" aria-label="Thông tin cá nhân">
+          <div class="monogram" aria-hidden="true">Gia Linh</div>
+          <h2>Học hỏi. Thực hành. Phát triển.</h2>
+          <p>Xây dựng nền tảng cho sự nghiệp trong lĩnh vực an ninh mạng.</p>
+          <dl>
+            <div>
+              <dt>Chuyên ngành</dt>
+              <dd>An toàn thông tin</dd>
+            </div>
+            <div>
+              <dt>Trường</dt>
+              <dd>Trường Đại Học FPT Cần Thơ</dd>
+            </div>
+            <div>
+              <dt>Định hướng</dt>
+              <dd>SecOps</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+
+      <section id="about">
+        <div class="heading">
+          <div class="eyebrow">01 / Giới thiệu</div>
+          <h2>Phát triển từ những trải nghiệm thực tế.</h2>
+        </div>
+        <p class="muted">
+          Tôi là Nguyễn Hoàng Gia Linh, sinh viên An toàn thông tin tại Trường Đại Học FPT Cần Thơ, với sự quan
+          tâm đến phân tích an ninh mạng, điều tra số và giải quyết các vấn đề
+          kỹ thuật. Bên cạnh kiến thức chuyên ngành, tôi thực hành Python, cơ sở
+          dữ liệu và phát triển web qua các dự án học tập.
+        </p>
+        <p class="muted">
+          Trải nghiệm cộng tác viên IT Helpdesk giúp tôi rèn luyện khả năng tiếp
+          nhận vấn đề, giao tiếp với người dùng và phối hợp hỗ trợ. Tôi mong
+          muốn tiếp tục học hỏi trong môi trường thực tế để phát triển thành một
+          Cybersecurity Analyst.
+        </p>
+      </section>
+
+      <section id="skills">
+        <div class="heading">
+          <div class="eyebrow">02 / Kỹ năng</div>
+          <h2>Nền tảng đang xây dựng.</h2>
+          <p>Kiến thức và công cụ được thực hành trong quá trình học tập.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="number">SECURITY & NETWORKING</div>
+            <h3>An toàn thông tin</h3>
+            <p>
+              Mạng máy tính, thực hành điều tra số và các bài tập CTF về
+              Forensics, Reverse Engineering.
+            </p>
+            <div class="tags">
+              <span class="tag">Networking</span>
+              <span class="tag">Digital Forensics</span>
+              <span class="tag">Cloud Computing</span>
+              <span class="tag">CTF</span>
+            </div>
+          </article>
+          <article class="card">
+            <div class="number">PROGRAMMING & DATA</div>
+            <h3>Lập trình & Web</h3>
+            <p>
+              Xây dựng chương trình Python, giao diện web cơ bản và làm việc với
+              cơ sở dữ liệu quan hệ.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">C</span>
+              <span class="tag">SQL</span><span class="tag">HTML / CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </article>
+          <article class="card">
+            <div class="number">TOOLS & COLLABORATION</div>
+            <h3>Công cụ & Làm việc nhóm</h3>
+            <p>
+              Thực hành trong môi trường Windows, Linux và máy ảo; quản lý mã
+              nguồn và phối hợp thực hiện dự án.
+            </p>
+            <div class="tags">
+              <span class="tag">Git / GitHub</span
+              ><span class="tag">Linux</span> <span class="tag">Wireshark</span
+              ><span class="tag">IDA Pro</span> <span class="tag">Docker</span
+              ><span class="tag">Teamwork</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="heading">
+          <div class="eyebrow">03 / Kinh nghiệm & Hoạt động</div>
+          <h2>Trải nghiệm thực tế, phát triển kỹ năng.</h2>
+          <p>Kinh nghiệm hỗ trợ kỹ thuật và tham gia hoạt động cộng đồng.</p>
+        </div>
+
+        <div style="display: grid; gap: 20px">
+          <article class="card experience">
+            <div>
+              <div class="number">HIỆN TẠI</div>
+              <h3>Cộng tác viên IT Helpdesk</h3>
+              <p>Trường Đại Học FPT Cần Thơ</p>
+            </div>
+
+            <div>
+              <p>
+                Tham gia hỗ trợ kỹ thuật trong môi trường trường học, rèn luyện
+                khả năng tiếp nhận vấn đề và trao đổi với người dùng.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Technical Support</span>
+                <span class="tag">Problem Solving</span>
+                <span class="tag">Communication</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card experience">
+            <div>
+              <div class="number">07/2024 – 01/2025</div>
+              <h3>Ban Chủ nhiệm – Thủ quỹ</h3>
+              <p>F-Vovinam Club · Trường Đại Học FPT Cần Thơ</p>
+            </div>
+
+            <div>
+              <ul>
+                <li>Theo dõi và ghi chép các khoản thu, chi của CLB.</li>
+                <li>
+                  Tổng hợp thông tin tài chính và báo cáo với Ban Chủ nhiệm.
+                </li>
+                <li>
+                  Phối hợp cùng các thành viên theo dõi kinh phí cho các hoạt
+                  động và sự kiện.
+                </li>
+              </ul>
+
+              <div class="tags">
+                <span class="tag">Financial Tracking</span>
+                <span class="tag">Responsibility</span>
+                <span class="tag">Teamwork</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card experience">
+            <div>
+              <div class="number">10/2023 – 02/2025</div>
+              <h3>Thành viên Ban Truyền thông</h3>
+              <p>F-Vovinam Club · Trường Đại Học FPT Cần Thơ</p>
+            </div>
+
+            <div>
+              <ul>
+                <li>
+                  Sản xuất và biên tập nội dung truyền thông, bao gồm hình ảnh,
+                  video và bài viết về hoạt động của CLB.
+                </li>
+                <li>
+                  Tham gia truyền thông sự kiện, cập nhật các kênh truyền thông
+                  và tương tác với cộng đồng.
+                </li>
+                <li>
+                  Phối hợp cùng các thành viên để bảo đảm nội dung và hình ảnh
+                  được truyền tải chính xác, nhất quán.
+                </li>
+              </ul>
+
+              <div class="tags">
+                <span class="tag">Content Creation</span>
+                <span class="tag">Event Communication</span>
+                <span class="tag">Teamwork</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card experience">
+            <div>
+              <div class="number">01/2022 – 03/2023</div>
+              <h3>Thành viên</h3>
+              <p>Green Heart Environmental Protection Organization · Trường Đại Học FPT Cần Thơ</p>
+            </div>
+
+            <div>
+              <ul>
+                <li>
+                  Tham gia lên kế hoạch và tổ chức các sự kiện nâng cao nhận
+                  thức về bảo vệ môi trường.
+                </li>
+                <li>
+                  Phối hợp triển khai và theo dõi tiến độ các hoạt động, dự án
+                  môi trường.
+                </li>
+                <li>
+                  Kết nối với cộng đồng, khuyến khích sự tham gia vào các hoạt
+                  động bảo vệ môi trường.
+                </li>
+              </ul>
+
+              <div class="tags">
+                <span class="tag">Event Planning</span>
+                <span class="tag">Project Coordination</span>
+                <span class="tag">Community Engagement</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="heading">
+          <div class="eyebrow">04 / Dự án</div>
+          <h2>Từ kiến thức đến sản phẩm.</h2>
+          <p>Các dự án học tập về lập trình ứng dụng và cơ sở dữ liệu.</p>
+        </div>
+        <div class="grid two">
+          <article class="card">
+            <div class="number">01 / PYTHON APPLICATION</div>
+            <h3>Campus Event Management</h3>
+            <p>
+              Ứng dụng quản lý sự kiện trong trường học, hỗ trợ quản lý thông
+              tin sự kiện và đăng ký người tham dự.
+            </p>
+            <p>
+              Dự án giúp tôi thực hành tổ chức chương trình Python, xử lý dữ
+              liệu và xây dựng luồng tương tác của ứng dụng.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">Flask</span>
+              <span class="tag">JSON</span
+              ><span class="tag">Event Management</span>
+            </div>
+            <a
+              class="project-link"
+              href="https://campus-event-management-web.onrender.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Xem demo trực tiếp ↗</a
+            >
+          </article>
+          <article class="card">
+            <div class="number">02 / DATABASE PROJECT</div>
+            <h3>Cơ sở dữ liệu quản lý hiệu sách</h3>
+            <p>
+              Dự án học tập về thiết kế cơ sở dữ liệu cho bài toán quản lý hiệu
+              sách.
+            </p>
+            <p>
+              Tập trung vận dụng kiến thức cơ sở dữ liệu quan hệ, tổ chức dữ
+              liệu và viết truy vấn SQL phục vụ bài toán quản lý.
+            </p>
+            <div class="tags">
+              <span class="tag">SQL</span>
+              <span class="tag">Relational Database</span>
+              <span class="tag">Database Design</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="certificates">
+        <div class="heading">
+          <div class="eyebrow">05 / Chứng nhận & Khóa học</div>
+          <h2>Mạng, An toàn thông tin & Lập trình.</h2>
+        </div>
+
+        <div class="grid two">
+          <article class="card">
+            <div class="number">CISCO NETWORKING ACADEMY</div>
+            <h3>CCNA: Introduction to Networks</h3>
+            <p>Kiến thức nền tảng về mạng máy tính.</p>
+
+            <a
+              class="project-link"
+              href="./certificates/ccna-introduction.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Xem chứng nhận ↗
+            </a>
+          </article>
+
+          <article class="card">
+            <div class="number">CISCO NETWORKING ACADEMY</div>
+            <h3>CCNA: Switching, Routing, and Wireless Essentials</h3>
+            <p>Kiến thức về chuyển mạch, định tuyến và mạng không dây.</p>
+
+            <a
+              class="project-link"
+              href="./certificates/ccna-switching-routing.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Xem chứng nhận ↗
+            </a>
+          </article>
+
+          <article class="card">
+            <div class="number">NEW YORK UNIVERSITY · COURSERA</div>
+            <h3>Introduction to Cyber Security</h3>
+            <p>Nền tảng về an toàn thông tin và bảo vệ hệ thống.</p>
+
+            <div class="tags">
+              <span class="tag">Cybersecurity</span>
+              <span class="tag">Security Fundamentals</span>
+            </div>
+
+            <a
+              class="project-link"
+              href="https://coursera.org/share/858e614c236da22e77bdcc79b9880c00"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Xem chứng nhận ↗
+            </a>
+          </article>
+
+          <article class="card">
+            <div class="number">UNIVERSITY OF COLORADO SYSTEM · COURSERA</div>
+            <h3>Applied Cryptography</h3>
+            <p>Kiến thức về mật mã học ứng dụng trong bảo vệ thông tin.</p>
+
+            <div class="tags">
+              <span class="tag">Cryptography</span>
+              <span class="tag">Information Security</span>
+            </div>
+
+            <a
+              class="project-link"
+              href="https://coursera.org/share/3e6ee546d63894197f0e618b31a84581"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Xem chứng nhận ↗
+            </a>
+          </article>
+          <article class="card">
+            <div class="number">UNIVERSITY OF MICHIGAN · COURSERA</div>
+            <h3>Using Python to Access Web Data</h3>
+            <p>Truy cập dữ liệu web và API bằng Python.</p>
+            <p class="muted">Hoàn thành: <time datetime="2026-09-20">20/09/2026</time></p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Web Data</span><span class="tag">API</span></div>
+            <a class="project-link" href="https://www.coursera.org/account/accomplishments/verify/PQPNS92EQW7J" target="_blank" rel="noopener noreferrer">Xem chứng nhận ↗</a>
+          </article>
+          <article class="card">
+            <div class="number">PACKT · COURSERA</div>
+            <h3>Concurrent and Parallel Programming in Python</h3>
+            <p>Lập trình đồng thời và song song trong Python.</p>
+            <p class="muted">Hoàn thành: <time datetime="2026-09-16">16/09/2026</time></p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Concurrency</span><span class="tag">Parallel Programming</span></div>
+            <a class="project-link" href="https://www.coursera.org/account/accomplishments/verify/7MZBH1HF70UT" target="_blank" rel="noopener noreferrer">Xem chứng nhận ↗</a>
+          </article>
+          <article class="card">
+            <div class="number">ARIZONA STATE UNIVERSITY · COURSERA</div>
+            <h3>Object-Oriented Programming and GUI with Python</h3>
+            <p>Lập trình hướng đối tượng và xây dựng giao diện đồ họa bằng Python.</p>
+            <p class="muted">Hoàn thành: <time datetime="2026-09-15">15/09/2026</time></p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">OOP</span><span class="tag">GUI</span></div>
+            <a class="project-link" href="https://www.coursera.org/account/accomplishments/verify/5VD5WJMBFF24" target="_blank" rel="noopener noreferrer">Xem chứng nhận ↗</a>
+          </article>
+          <article class="card">
+            <div class="number">CERTNEXUS · COURSERA</div>
+            <h3>CertNexus Certified Ethical Emerging Technologist Professional Certificate</h3>
+            <p>Chương trình về đạo đức trong ứng dụng công nghệ mới nổi và công nghệ dựa trên dữ liệu.</p>
+            <p class="muted">Hoàn thành: <time datetime="2024-09-12">12/09/2024</time></p>
+            <div class="tags"><span class="tag">Technology Ethics</span><span class="tag">Data Ethics</span></div>
+            <a class="project-link" href="https://www.coursera.org/account/accomplishments/specialization/XGBCPMDH3JKN" target="_blank" rel="noopener noreferrer">Xem chứng nhận ↗</a>
+          </article>
+          <article class="card">
+            <div class="number">POLITECNICO DI MILANO · COURSERA</div>
+            <h3>Ethics of Artificial Intelligence</h3>
+            <p>Đạo đức trong phát triển và sử dụng trí tuệ nhân tạo.</p>
+            <p class="muted">Hoàn thành: <time datetime="2024-09-12">12/09/2024</time></p>
+            <div class="tags"><span class="tag">AI Ethics</span><span class="tag">Responsible AI</span></div>
+            <a class="project-link" href="https://www.coursera.org/account/accomplishments/verify/FB9VNG8ZK41Q" target="_blank" rel="noopener noreferrer">Xem chứng nhận ↗</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="contact">
+          <div class="eyebrow">06 / Liên hệ</div>
+          <h2>Kết nối cùng Gia Linh.</h2>
+          <p>
+            Tôi mong muốn có cơ hội học hỏi, tham gia dự án và phát triển kỹ
+            năng trong lĩnh vực công nghệ thông tin, an toàn thông tin.
+          </p>
+          <div class="actions">
+            <a
+              class="button primary"
+              href="https://www.linkedin.com/in/nguy%E1%BB%85n-ho%C3%A0ng-gia-linh-322b062b8/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn ↗</a
+            >
+            <a
+              class="button"
+              href="https://github.com/gialinh0412"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub ↗</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <span>© <span id="year">2026</span> Nguyễn Hoàng Gia Linh</span>
+        <span>Information Security · Cần Thơ, Việt Nam</span>
+      </div>
+    </footer>
+
+    <script>
+      const menu = document.querySelector(".menu");
+      const links = document.querySelector(".links");
+
+      function closeMenu() {
+        links.classList.remove("open");
+        menu.setAttribute("aria-expanded", "false");
+      }
+
+      menu.addEventListener("click", () => {
+        const expanded = menu.getAttribute("aria-expanded") === "true";
+        links.classList.toggle("open", !expanded);
+        menu.setAttribute("aria-expanded", String(!expanded));
+      });
+
+      links.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && links.classList.contains("open")) {
+          closeMenu();
+          menu.focus();
+        }
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
