@@ -174,7 +174,9 @@
       .monogram {
         display: grid;
         place-items: center;
-        width: 90px;
+        width: fit-content;
+        min-width: 90px;
+        padding: 0 20px;
         height: 90px;
         border-radius: 24px;
         background: var(--mint);
@@ -384,7 +386,7 @@
     <header>
       <nav class="container nav" aria-label="Điều hướng chính">
         <a class="logo" href="#" aria-label="Gia Linh — Trang đầu"
-          >GL<span>.</span></a
+          >Gia Linh<span>.</span></a
         >
         <button
           class="menu"
@@ -430,7 +432,7 @@
         </div>
 
         <aside class="profile" aria-label="Thông tin cá nhân">
-          <div class="monogram" aria-hidden="true">GL</div>
+          <div class="monogram" aria-hidden="true">Gia Linh</div>
           <h2>Học hỏi. Thực hành. Phát triển.</h2>
           <p>Xây dựng nền tảng cho sự nghiệp trong lĩnh vực an ninh mạng.</p>
           <dl>
